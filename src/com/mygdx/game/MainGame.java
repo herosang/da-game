@@ -1,6 +1,7 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 
 /**
@@ -10,7 +11,9 @@ public class MainGame extends Game {
 
 
     public void create(){
-            setScreen(new PlayGame());
+        PlayGame game = new PlayGame();
+            setScreen(game);
+        Gdx.input.setInputProcessor(game);
     }
     public MainGame() {
         super();
